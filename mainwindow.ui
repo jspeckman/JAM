@@ -35,7 +35,7 @@
      <attribute name="title">
       <string>Library</string>
      </attribute>
-     <widget class="QTreeView" name="treeView">
+     <widget class="QTreeView" name="treeViewLibrary">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -43,6 +43,9 @@
         <width>191</width>
         <height>341</height>
        </rect>
+      </property>
+      <property name="headerHidden">
+       <bool>true</bool>
       </property>
      </widget>
      <widget class="QTableView" name="tableView">

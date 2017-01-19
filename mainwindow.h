@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QFileSystemModel>
 #include "dialogpreferences.h"
 
 namespace Ui {
@@ -22,6 +23,9 @@ public slots:
 private:
     Ui::MainWindow *ui;
     DialogPreferences *prefs;
+    QFileSystemModel *dirModel;
+
+    void initTreeViewLibrary();
 };
 
 #endif // MAINWINDOW_H
