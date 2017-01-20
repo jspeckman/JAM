@@ -25,10 +25,8 @@ void MainWindow::initTreeViewLibrary()
     dirModel->setRootPath("~/");
     dirModel->setFilter(QDir::AllDirs | QDir::NoDotAndDotDot);
     ui->treeViewLibrary->setHeaderHidden(true);
-
-
     ui->treeViewLibrary->setModel(dirModel);
-    ui->treeViewLibrary->hideColumn(1);
     ui->treeViewLibrary->hideColumn(2);
     ui->treeViewLibrary->hideColumn(3);
+    ui->treeViewLibrary->header()->setSectionResizeMode(0, QHeaderView::ResizeToContents);
 }
