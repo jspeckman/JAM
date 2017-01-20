@@ -48,22 +48,22 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QTableView" name="tableView">
-      <property name="geometry">
-       <rect>
-        <x>210</x>
-        <y>10</y>
-        <width>371</width>
-        <height>341</height>
-       </rect>
-      </property>
-     </widget>
      <widget class="QGraphicsView" name="graphicsView">
       <property name="geometry">
        <rect>
         <x>600</x>
         <y>10</y>
         <width>441</width>
+        <height>341</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QListView" name="listViewLibrary">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>10</y>
+        <width>381</width>
         <height>341</height>
        </rect>
       </property>
@@ -154,8 +154,25 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>treeViewLibrary</sender>
+   <signal>clicked(QModelIndex)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onTreeViewLibrary_clicked(QModelIndex)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>109</x>
+     <y>237</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>530</x>
+     <y>410</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>OpenPreferences()</slot>
+  <slot>onTreeViewLibrary_clicked(QModelIndex)</slot>
  </slots>
 </ui>
